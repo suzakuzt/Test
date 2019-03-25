@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+		PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="context1" targetRuntime="MyBatis3">
+		<!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+		<property name="javaFileEncoding" value="UTF-8" />
+		<!-- oracle配置 -->
+		<!--jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+						connectionURL ="jdbc:sqlserver://42.159.201.227:1433;DatabaseName=CppCore"
+						userId="cppsa" password="Cpp2017"-->
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+						connectionURL ="jdbc:mysql://121.40.197.16:3000/test"
+						userId="root" password="root">
+
+
+
+			<!-- 针对oracle数据库 -->
+			<property name="remarksReporting" value="true"></property>
+
+			<!-- 针对数据库 -->
+			<!--<property name="useInformationSchema" value="true"></property>-->
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- model class -->
+		<javaModelGenerator targetPackage="com.example.demo.model"
+							targetProject="F:\demo\src\main\java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- mybatis xml file -->
+		<sqlMapGenerator targetPackage="com.example.demo.mapper"
+						 targetProject="F:\demo\src\main\resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- mapper class -->
+		<javaClientGenerator type="XMLMAPPER"
+							 targetPackage="com.example.demo.mapper" targetProject="F:\demo\src\main\java">
+			<property name="enableSubPackages" value="true"/>
+		</javaClientGenerator>
+
+		<table tableName="AppUser" domainObjectName="AppUser" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
+
+	</context>
+</generatorConfiguration>
+
+		<!--connectionURL="jdbc:sqlserver://42.159.201.227:1433;DatabaseName=CppCore"
+        userId="cppsa" password="Cpp2017"-->

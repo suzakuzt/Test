@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name ="BasicProcessTeest">
+<test name ="BrandManageTest">
+
+    <classes>
+            <class name ="com.example.demo.Basicsetting.BrandManage">
+
+            </class>
+        </classes>
+    </test>
+    <test name ="CategoriesListTest">
+
+
+        <classes>
+            <class name ="com.example.demo.Basicsetting.CategoriesList">
+            </class>
+        </classes>
+    </test>
+    <test name ="ChannelTest">
+
+
+        <classes>
+            <class name ="com.example.demo.Basicsetting.Channel">
+            </class>
+        </classes>
+    </test>
+    <test name ="ParcelTest">
+
+
+        <classes>
+            <class name ="com.example.demo.Basicsetting.Parcel">
+            </class>
+        </classes>
+    </test>
+    <test name ="StoreManageTest">
+
+        <classes>
+            <class name ="com.example.demo.Basicsetting.StoreManage">
+            </class>
+        </classes>
+    </test>
+    <test name ="ExpressrulesManageTest">
+
+
+        <classes>
+            <class name ="com.example.demo.ExpressRules.ExpressrulesManage">
+            </class>
+        </classes>
+    </test>
+    <test name ="ProductSettingTest">
+
+    <classes>
+        <class name ="com.example.demo.ProductManage.ProductSetting">
+        </class>
+    </classes>
+    </test>
+    <!--<test name ="ProductSettingTest">-->
+        <!--<classes>-->
+            <!--<class name ="com.example.demo.RoleManage.Rolesetting">-->
+            <!--</class>-->
+        <!--</classes>-->
+        <!---->
+
+    <!--</test>-->
+
+
+
+</suite>

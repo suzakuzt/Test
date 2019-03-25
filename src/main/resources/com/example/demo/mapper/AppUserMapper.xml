@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.AppUserMapper" >
+
+    <select id="getBrand" resultType="java.util.Map">
+        select Name from Brand order by id DESC limit 1
+    </select>
+
+    <select id="getBrandid" resultType="java.util.Map">
+        select Id from Brand order by id DESC limit 1
+    </select>
+    <select id="getCategory" resultType="java.util.Map">
+        select Name from Category order by id DESC limit 1
+    </select>
+
+    <select id="getCategoryid" resultType="java.util.Map">
+        select Id from Category order by id DESC limit 1
+    </select>
+
+    <select id="getchannel" resultType="java.util.Map">
+        select Name from Channel order by id DESC limit 1
+    </select>
+
+    <select id="getchannelid" resultType="java.util.Map">
+        select Id from Channel order by id DESC limit 1
+    </select>
+
+    <select id="getparcel" resultType="java.util.Map">
+        select Name from ExpressCompany order by id DESC limit 1
+    </select>
+
+    <select id="getparcelid" resultType="java.util.Map">
+        select Id from ExpressCompany order by id DESC limit 1
+    </select>
+    <select id="getstore" resultType="java.util.Map">
+        select Name from Warehouse order by id DESC limit 1
+    </select>
+
+    <select id="getstoreid" resultType="java.util.Map">
+        select Id from Warehouse order by id DESC limit 1
+    </select>
+
+    <select id="getproduct" resultType="java.util.Map">
+        select Name from Product order by id DESC limit 1
+    </select>
+
+    <select id="getproductid" resultType="java.util.Map">
+        select Id from Product order by id DESC limit 1
+    </select>
+
+    <select id="getproductsku" resultType="java.util.Map">
+        select Name from ProductSKU order by id DESC limit 1
+    </select>
+
+    <select id="getproductskuid" resultType="java.util.Map">
+        select Id from ProductSKU order by id DESC limit 1
+    </select>
+
+    <select id="getexpressrule" resultType="java.util.Map">
+        select Name from ExpressRule order by id DESC limit 1
+    </select>
+
+    <select id="getexpressruleid" resultType="java.util.Map">
+        select Id from  ExpressRule order by id DESC limit 1
+    </select>
+
+    <select id="getcampaigns" resultType="java.util.Map">
+        select Name from Campaign order by id DESC limit 1
+    </select>
+
+    <select id="getcampaignsid" resultType="java.util.Map">
+        select Id from  Campaign order by id DESC limit 1
+    </select>
+
+    <select id="getdestroyTime" resultType="java.util.Map">
+        select destroyTime from  Brand order by id DESC limit 1
+    </select>
+
+    <select id="categoriesdestroyTime" resultType="java.util.Map">
+        select destroyTime from Category order by id DESC limit 1
+    </select>
+
+    <select id="channeldestroyTime" resultType="java.util.Map">
+        select destroyTime from Channel order by id DESC limit 1
+    </select>
+
+    <select id="parceldestroyTime" resultType="java.util.Map">
+        select destroyTime from ExpressCompany order by id DESC limit 1
+    </select>
+
+    <select id="storedestroyTime" resultType="java.util.Map">
+        select destroyTime from Warehouse order by id DESC limit 1
+    </select>
+
+    <select id="ruledestroyTime" resultType="java.util.Map">
+        select destroyTime from ExpressRule order by id DESC limit 1
+    </select>
+
+    <select id="productdestroyTime" resultType="java.util.Map">
+        select destroyTime from Product order by id DESC limit 1
+    </select>
+    <select id="pskudestroyTime" resultType="java.util.Map">
+        select destroyTime from ProductSKU order by id DESC limit 1
+    </select>
+
+    <select id="campaignsdestroyTime" resultType="java.util.Map">
+        select destroyTime from Campaign order by id DESC limit 1
+    </select>
+
+
+</mapper>

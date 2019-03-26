@@ -55,25 +55,20 @@ public class OrderManage extends AbstractTestNGSpringContextTests {
         String actual = appUserService.selectorder(url,token);
     }
 
-    //修改渠道
+    //修改订单
     public void orderrevision(String token) throws Exception {
-        Map<String, Object> map = appUserMapper.getchannelid(Id);
-        String id = String.valueOf(map.get("Id"));
+        Map<String, Object> map = appUserMapper.orderrevisioncode(Id);
+        String id = String.valueOf(map.get("OrderNo"));
         System.out.println(id);
         String url = "/api/orders/{orderNo}";
         String changename=String.valueOf(Random.getRandomChar());
         System.out.println("changename"+changename);
-        //  String json = "{\"id\":\""+id+"\",\"name\":\""+changename+"\",\"needDaliyReminder\":\"true\",\"type\":\"0\"}";
-        String json ="{\"type\":\"1\",\"name\":\""+changename+"\",\"isSingle\":true,\"needDaliyReminder\":true,\"destroyTime\":null,\"parentId\":null,\"creatorUserId\":null,\"lastModifierUserId\":null,\"editable\":true}";
+        String json ="";
         System.out.println(json);
         String actual = appUserService.orderrevision(url, json);
-        Map<String, Object> map1 = appUserMapper.orderrevision(Id);
-        String Name = String.valueOf(map1.get("Name"));
-        System.out.println("Name的值为"+Name);
-        Assertion.verifyEquals(changename,Name,"添加数值修改类型失败");
+//        Map<String, Object> map1 = appUserMapper.orderrevision(Id);
+//        String Name = String.valueOf(map1.get("Name"));
+//        System.out.println("Name的值为"+Name);
+//        Assertion.verifyEquals(changename,Name,"添加数值修改类型失败");
     }
-
-
-
-
 }

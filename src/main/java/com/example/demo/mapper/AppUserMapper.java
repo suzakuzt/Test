@@ -62,8 +62,10 @@ public interface AppUserMapper {
     Map<String,Object> pskudestroyTime(@Param("getdestroyTime") String OutTradeNo);
     //查询删除快产品营销的时间信息
     Map<String,Object> campaignsdestroyTime(@Param("getdestroyTime") String OutTradeNo);
-
-
+    //查询对应的的订单ID
+    Map<String,Object> orderrevisionid(@Param("Name") String OutTradeNo);
+    //查询对应的订单code
+    Map<String,Object> orderrevisioncode(@Param("id") String OutTradeNo);
 
 
 }

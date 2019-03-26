@@ -132,7 +132,7 @@
         </dependency>
     </dependencies>
 
-    <build>
+<!--    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -148,7 +148,7 @@
                     <compilerArgs>
                         <arg>-Xlint:unchecked</arg>
                         <arg>-Xlint:deprecation </arg>
-                        <!--<arg>endorseddirs=${endorsed.dir}</arg>-->
+                        &lt;!&ndash;<arg>endorseddirs=${endorsed.dir}</arg>&ndash;&gt;
                     </compilerArgs>
                 </configuration>
             </plugin>
@@ -161,8 +161,28 @@
                     <suiteXmlFiles>
                         <file>res/testNG.xml</file>
                     </suiteXmlFiles>
-                    <!--<workingDirectory>target/</workingDirectory>-->
+                    &lt;!&ndash;<workingDirectory>target/</workingDirectory>&ndash;&gt;
                 </configuration>
+            </plugin>
+        </plugins>
+    </build>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 工程主入口-->
+                    <mainClass>com.example.demo.DemoApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

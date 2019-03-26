@@ -267,7 +267,9 @@ public interface AppUserService {
   **/
  String selectorder(String urltest, String token) throws Exception;
 
-
-
+ /*
+  *41.订单修改
+  **/
+ String orderrevision(String urltest, String json) throws Exception;
 
 }

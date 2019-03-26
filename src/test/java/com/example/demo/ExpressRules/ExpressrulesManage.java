@@ -113,7 +113,6 @@ public class ExpressrulesManage  extends AbstractTestNGSpringContextTests {
     public void templates(String token) throws Exception {
         String url = "/api/express/templates";
         String actual = appUserService.templates(url,token);
-
     }
 
 }

@@ -579,7 +579,7 @@ public class AppUserServiceImpl implements AppUserService {
 
 
 
-    /*
+     /*
      *获取面单模板
      **/
     @Override
@@ -604,4 +604,14 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
 
+    /*
+     *修改订单
+     **/
+    @Override
+    public String orderrevision(String urltest, String json) throws Exception {
+        String url = Url.URL + urltest;
+        String s = HttpClient.sendHttpPutJson(url, json);
+        System.out.println(s);
+        return (s);
+    }
 }

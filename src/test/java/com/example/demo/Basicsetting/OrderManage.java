@@ -49,7 +49,7 @@ public class OrderManage extends AbstractTestNGSpringContextTests {
         String actual = appUserService.selectorder(url,token);
     }
 
-     //获取订单详细
+    //获取订单详细
     public void selectorderdetail(String token) throws Exception {
         String url = "/api/order/{orderNo}";
         String actual = appUserService.selectorder(url,token);
@@ -71,4 +71,29 @@ public class OrderManage extends AbstractTestNGSpringContextTests {
 //        System.out.println("Name的值为"+Name);
 //        Assertion.verifyEquals(changename,Name,"添加数值修改类型失败");
     }
+
+    //获取订单文件映射关系
+    public void getOrderMappingRelationship(String token) throws Exception {
+        String url = "/api/file/filedmap/{taskrecordid}";
+        String actual = appUserService.selectorder(url,token);
+    }
+
+    //修改订单文件映射关系
+    public void putOrderMappingRelationship(String token) throws Exception {
+        Map<String, Object> map = appUserMapper.modifyOrderMappingRelationship(Id);
+        String id = String.valueOf(map.get("Id"));
+        String url = "/api/file/filedmap" + "?taskrecordid=" + id;
+        String fileMaps = String.valueOf(Random.getRandomChar());
+        String json = "{\"fileMaps\":\"" + fileMaps + "\"}";
+        appUserService.modifyOrderMappingRelationship(url, json);
+        Map<String, Object> map1 = appUserMapper.getCategory(Id);
+        String Name = String.valueOf(map1.get("fileMaps"));
+        Assertion.verifyEquals(fileMaps, Name, "修改失败");
+    }
+
+
+
+
+
+
 }

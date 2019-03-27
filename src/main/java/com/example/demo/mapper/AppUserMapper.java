@@ -5,8 +5,8 @@ import org.apache.ibatis.annotations.Param;
 import java.util.Map;
 
 /*
-* 数据库操作
-* */
+ * 数据库操作
+ * */
 public interface AppUserMapper {
     //查询对应的新添加的品牌产品名称
     Map<String,Object> getBrand(@Param("id") String OutTradeNo);
@@ -66,6 +66,7 @@ public interface AppUserMapper {
     Map<String,Object> orderrevisionid(@Param("Name") String OutTradeNo);
     //查询对应的订单code
     Map<String,Object> orderrevisioncode(@Param("id") String OutTradeNo);
-
+    //修改订单文件映射关系
+    Map<String,Object> modifyOrderMappingRelationship(@Param("id") String OutTradeNo);
 
 }

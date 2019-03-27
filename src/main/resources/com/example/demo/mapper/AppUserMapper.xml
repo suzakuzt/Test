@@ -106,7 +106,6 @@
     <select id="campaignsdestroyTime" resultType="java.util.Map">
         select destroyTime from Campaign order by id DESC limit 1
     </select>
-
     <select id="orderrevisionid" resultType="java.util.Map">
         select Id from Order order by id DESC limit 1
     </select>
@@ -115,9 +114,8 @@
         select OrderNo from Order by id DESC limit 1
     </select>
 
-
-
-
-
+    <select id="modifyOrderMappingRelationship" resultType="java.util.Map">
+        select Id from HashMap by id DESC limit 1
+    </select>
 
 </mapper>

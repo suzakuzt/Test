@@ -63,7 +63,7 @@ public class AppUserServiceImpl implements AppUserService {
 //        return null;
 //    }
 
-  //  登录接口
+    //  登录接口
     @Override
     public String login(String urltest, String json) throws Exception {
         String url = Url.URL + urltest;
@@ -77,7 +77,7 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
 
-//    /*
+    //    /*
 //     * 4.获取数据素材库列表值
 //     */
 //    public String getdata(String urltest,String token) throws Exception {
@@ -96,28 +96,28 @@ public class AppUserServiceImpl implements AppUserService {
 //        String s = HttpClient.sendHttpGet(url, token);
 //        return (s);
 //    }
-        /*
-        *新增品牌接口测试
-        **/
-        @Override
-        public String newbrand(String urltest, String json) throws Exception {
-            String url = Url.URL + urltest;
-            String s = HttpClient.sendHttpPostJson(url, json);
-            System.out.println(s);
-            return(s);
-        }
+    /*
+     *新增品牌接口测试
+     **/
+    @Override
+    public String newbrand(String urltest, String json) throws Exception {
+        String url = Url.URL + urltest;
+        String s = HttpClient.sendHttpPostJson(url, json);
+        System.out.println(s);
+        return (s);
+    }
 
-        /*
-         *查询品牌
-         **/
-        @Override
-        public String selectbrand(String urltest,String token) throws Exception {
-            String url = Url.URL + urltest;
-            System.out.println(url);
-            String s = HttpClient.sendHttpGet(url, token);
-            System.out.println(s);
-            return (s);
-        }
+    /*
+     *查询品牌
+     **/
+    @Override
+    public String selectbrand(String urltest, String token) throws Exception {
+        String url = Url.URL + urltest;
+        System.out.println(url);
+        String s = HttpClient.sendHttpGet(url, token);
+        System.out.println(s);
+        return (s);
+    }
 
     /*
      *修改品牌接口测试
@@ -127,7 +127,7 @@ public class AppUserServiceImpl implements AppUserService {
         String url = Url.URL + urltest;
         String s = HttpClient.sendHttpPutJson(url, json);
         System.out.println(s);
-        return(s);
+        return (s);
     }
 
 
@@ -135,13 +135,14 @@ public class AppUserServiceImpl implements AppUserService {
      *删除品牌接口测试
      **/
     @Override
-    public String deletebrand(String urltest,String token) throws Exception {
+    public String deletebrand(String urltest, String token) throws Exception {
         String url = Url.URL + urltest;
         System.out.println(url);
         String s = HttpClient.sendHttpDelete(url, token);
         System.out.println(s);
         return (s);
     }
+
     /*
      *新增仓库接口测试
      **/
@@ -150,14 +151,14 @@ public class AppUserServiceImpl implements AppUserService {
         String url = Url.URL + urltest;
         String s = HttpClient.sendHttpPostJson(url, json);
         System.out.println(s);
-        return(s);
+        return (s);
     }
 
     /*
      *查询仓库
      **/
     @Override
-    public String selectstore(String urltest,String token) throws Exception {
+    public String selectstore(String urltest, String token) throws Exception {
         String url = Url.URL + urltest;
         System.out.println(url);
         String s = HttpClient.sendHttpGet(url, token);
@@ -173,7 +174,7 @@ public class AppUserServiceImpl implements AppUserService {
         String url = Url.URL + urltest;
         String s = HttpClient.sendHttpPutJson(url, json);
         System.out.println(s);
-        return(s);
+        return (s);
     }
 
 
@@ -181,7 +182,7 @@ public class AppUserServiceImpl implements AppUserService {
      *删除仓库接口测试
      **/
     @Override
-    public String deletestore(String urltest,String token) throws Exception {
+    public String deletestore(String urltest, String token) throws Exception {
         String url = Url.URL + urltest;
         System.out.println(url);
         String s = HttpClient.sendHttpDelete(url, token);
@@ -198,14 +199,14 @@ public class AppUserServiceImpl implements AppUserService {
         String url = Url.URL + urltest;
         String s = HttpClient.sendHttpPostJson(url, json);
         System.out.println(s);
-        return(s);
+        return (s);
     }
 
     /*
      *查询类型接口测试
      **/
     @Override
-    public String selectcategories(String urltest,String token) throws Exception {
+    public String selectcategories(String urltest, String token) throws Exception {
         String url = Url.URL + urltest;
         System.out.println(url);
         String s = HttpClient.sendHttpGet(url, token);
@@ -221,7 +222,7 @@ public class AppUserServiceImpl implements AppUserService {
         String url = Url.URL + urltest;
         String s = HttpClient.sendHttpPutJson(url, json);
         System.out.println(s);
-        return(s);
+        return (s);
     }
 
 
@@ -229,14 +230,13 @@ public class AppUserServiceImpl implements AppUserService {
      *删除类型接口测试
      **/
     @Override
-    public String deletecategories(String urltest,String token) throws Exception {
+    public String deletecategories(String urltest, String token) throws Exception {
         String url = Url.URL + urltest;
         System.out.println(url);
         String s = HttpClient.sendHttpDelete(url, token);
         System.out.println(s);
         return (s);
     }
-
 
 
     /*
@@ -247,7 +247,7 @@ public class AppUserServiceImpl implements AppUserService {
         String url = Url.URL + urltest;
         String s = HttpClient.sendHttpPostJson(url, json);
         System.out.println(s);
-        return(s);
+        return (s);
     }
 
     /*
@@ -300,7 +300,6 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
 
-
     /*
      *新增渠道接口测试
      **/
@@ -309,7 +308,7 @@ public class AppUserServiceImpl implements AppUserService {
         String url = Url.URL + urltest;
         String s = HttpClient.sendHttpPostJson(url, json);
         System.out.println(s);
-        return(s);
+        return (s);
 
     }
 
@@ -334,7 +333,7 @@ public class AppUserServiceImpl implements AppUserService {
         String url = Url.URL + urltest;
         String s = HttpClient.sendHttpPutJson(url, json);
         System.out.println(s);
-        return(s);
+        return (s);
     }
 
 
@@ -538,7 +537,6 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
 
-
     /*
      *查询快递规则
      **/
@@ -564,7 +562,6 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
 
-
     /*
      *删除快递规则
      **/
@@ -578,8 +575,7 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
 
-
-     /*
+    /*
      *获取面单模板
      **/
     @Override
@@ -603,7 +599,6 @@ public class AppUserServiceImpl implements AppUserService {
         return (s);
     }
 
-
     /*
      *修改订单
      **/
@@ -613,5 +608,59 @@ public class AppUserServiceImpl implements AppUserService {
         String s = HttpClient.sendHttpPutJson(url, json);
         System.out.println(s);
         return (s);
+
     }
+
+
+    /*
+     * 修改订单文件映射关系
+     **/
+    public String modifyOrderMappingRelationship (String urltest, String json) throws Exception {
+        String url = Url.URL + urltest;
+        String s = HttpClient.sendHttpPutJson(url, json);
+        System.out.println(s);
+        return (s);
+    }
+
+
+    /*
+     *订单处理
+     **/
+    @Override
+    public String orderfilehandel(String urltest, String json) throws Exception {
+        String url = Url.URL + urltest;
+        String s = HttpClient.sendHttpPostJson(url, json);
+        System.out.println(s);
+        return (s);
+    }
+
+    /*
+     *订单导入历史记录
+     **/
+    @Override
+    public String orderfilehistory(String urltest, String json) throws Exception {
+        String url = Url.URL + urltest;
+        String s = HttpClient.sendHttpPostJson(url, json);
+        System.out.println(s);
+        return (s);
+    }
+
+
+    /*
+     *订单导入预览
+     **/
+    @Override
+    public String orderfilepreview(String urltest, String json) throws Exception {
+        String url = Url.URL + urltest;
+        String s = HttpClient.sendHttpPostJson(url, json);
+        System.out.println(s);
+        return (s);
+    }
+
+
+
+
+
+
+
 }

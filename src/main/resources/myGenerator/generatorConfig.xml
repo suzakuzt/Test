@@ -13,7 +13,7 @@
 						userId="cppsa" password="Cpp2017"-->
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-						connectionURL ="jdbc:mysql://121.40.197.16:3000/test"
+						connectionURL ="jdbc:mysql://121.40.197.16:3000/test2"
 						userId="root" password="root">
 
 

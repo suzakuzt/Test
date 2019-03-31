@@ -160,10 +160,10 @@ public class AppUserServiceImpl implements AppUserService {
     @Override
     public String selectstore(String urltest, String token) throws Exception {
         String url = Url.URL + urltest;
-        System.out.println(url);
         String s = HttpClient.sendHttpGet(url, token);
-        System.out.println(s);
         return (s);
+       // System.out.println(url);
+        // System.out.println(s);
     }
 
     /*

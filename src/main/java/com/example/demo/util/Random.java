@@ -24,6 +24,8 @@ public class Random {
 
 
 
+    
+
     //Unicode 基本汉字编码范围0x4e00~0x9fa5 共 20902个
     private final static int HANZI_LENGTH = 20902 ; //汉字生成码
 
